@@ -51,7 +51,7 @@ const Dogs = () => {
         <select 
           onChange={handleBreedChange} 
           value={selectedBreed || 'random'}
-          className="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white"
+          className="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-gray-400"
         >
           <option value="random">Random Dogs</option>
           {breeds.map(breed => (
