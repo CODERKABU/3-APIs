@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #f3f4f6;
+  }
+  
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+
+  .glass-card button{
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, #3b82f6, #9333ea);
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+
+  .glass-card button:hover {
+    opacity: 0.9;
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-4px);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 1rem;
+    max-width: 32rem;
+    margin: 0 auto 2rem;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-color: #9ca3af;
+    outline: none;
+    transition: border 0.2s;
+  }
+  
+  .search-bar input:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #3b82f6;
+  }
+  
+  .search-bar button {
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(to right, #3b82f6, #9333ea);
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  
+  .search-bar button:hover {
+    opacity: 0.9;
+  }
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border: 4px solid rgba(96, 165, 250, 0.3);
+    border-top-color: #60a5fa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .error-message {
+    background-color: rgba(239, 68, 68, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    /* background: linear-gradient(to right, #60a5fa, #a855f7); */
+    --webkit-background-clip: text;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .page-header p {
+    font-size: 1.125rem;
+    color: #d1d5db;
+  }
+  
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .content-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .content-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  
+  .weather-card {
+    text-align: center;
+  }
+  
+  .weather-temp {
+    font-size: 3.75rem;
+    font-weight: bold;
+    /* background: linear-gradient(to right, #60a5fa, #a855f7); */
+    --webkit-background-clip: text;
+    color: white;
+    margin: 1rem 0;
+  }
+  
+  .weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .weather-details {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .weather-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .movie-card img {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .movie-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .movie-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #facc15;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dog-card img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .breed-name {
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
